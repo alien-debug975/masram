@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Business Name</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:#fff;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  height:100vh;
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+header h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+header p{
+  max-width:600px;
+  font-size:1.1rem;
+  opacity:0.9;
+}
+
+header button{
+  margin-top:25px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#fff;
+  color:#2563eb;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+header button:hover{
+  transform:scale(1.1);
+}
+
+/* SECTIONS */
+section{
+  padding:80px 10%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:2.2rem;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  opacity:0.8;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.service-box{
+  background:#1e293b;
+  padding:30px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.service-box:hover{
+  transform:translateY(-10px);
+  background:#2563eb;
+}
+
+.service-box h3{
+  margin-bottom:10px;
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.about div{
+  background:#1e293b;
+  padding:30px;
+  border-radius:15px;
+}
+
+/* CONTACT */
+.contact form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact input, .contact textarea{
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+}
+
+.contact button{
+  background:#2563eb;
+  color:#fff;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  opacity:0.8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header h1{font-size:2.2rem;}
+  .about{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Your Business Name</h1>
+  <p>We provide professional, reliable, and modern services to help your business grow and succeed.</p>
+  <button onclick="scrollToSection('services')">Our Services</button>
+</header>
+
+<section id="services">
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>What we offer to our clients</p>
+  </div>
+
+  <div class="services">
+    <div class="service-box">
+      <h3>Service One</h3>
+      <p>High-quality service tailored to meet your needs.</p>
+    </div>
+    <div class="service-box">
+      <h3>Service Two</h3>
+      <p>Professional solutions delivered on time.</p>
+    </div>
+    <div class="service-box">
+      <h3>Service Three</h3>
+      <p>Affordable and reliable services for all clients.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>About Us</h2>
+    <p>Who we are</p>
+  </div>
+
+  <div class="about">
+    <div>
+      <h3>Our Mission</h3>
+      <p>To deliver top-quality services and exceed customer expectations.</p>
+    </div>
+    <div>
+      <h3>Our Vision</h3>
+      <p>To become a trusted and leading business in our industry.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us</p>
+  </div>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Your Business Name | All Rights Reserved
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
